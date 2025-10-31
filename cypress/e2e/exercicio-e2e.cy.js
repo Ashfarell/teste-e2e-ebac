@@ -53,7 +53,8 @@ describe('Funcionalidade: E2E', () => {
     let cep = '03528-002'                                               //Nº gerado c/ faker n/ era aceito
     let telefone = '11877563897'                                        //Nº gerado c/ faker n/ era aceito
     cy.cadastroCompra(faker.person.firstName(), faker.person.lastName(), faker.location.streetAddress(), faker.location.city(), cep , telefone)
-    //cy.get('.woocommerce-order-overview__order > strong').should('exist')
+    cy.get('.page-title').should('exist')
+    //cy.get('.page-title').should('contain', 'PEDIDO RECEBIDO')
     });
 
   //it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
